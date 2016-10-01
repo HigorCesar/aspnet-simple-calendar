@@ -1,0 +1,23 @@
+﻿
+@model SimpleCalendar.Web.Models.AppointmentDetailsViewModel
+
+@if (Model != null)
+{
+    <dl class="dl-horizontal">
+        <dt>Description:</dt>
+        <dd>@Model.Description</dd>
+        <dt>Date</dt>
+        <dd>@Model.When</dd>
+        <dt>Organizer</dt>
+        <dd>@Model.Organizer</dd>
+        <dt>Attendees</dt>
+        <dd>
+            <ul>
+                @foreach (var attendee in Model.Attendees)
+                {
+                    <li>@attendee</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+}

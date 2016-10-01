@@ -1,0 +1,60 @@
+﻿@using SimpleCalendar.Domain
+@model SimpleCalendar.Web.Models.CalendarViewModel
+
+@{
+    ViewBag.Title = "Appointments";
+}
+
+<h2>Calendar</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h4>Choose your month</h4>
+            <div class="btn-group" role="group" aria-label="...">
+
+                @foreach (var month in Model.Months)
+                {
+                    <button type="button" class="btn btn-default btn-month" x-month="@month.Id">@month.Text</button>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10%">
+        <div class="col-xs-6">
+            <div class="panel panel-default">
+                <h4 style="text-align: center">Appointment list</h4>
+                <div class="panel-body" id="appointments">
+                    @{Html.RenderPartial("Appointments", Model.Appointments);}
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="panel panel-default">
+                <h4 style="text-align: center">Appointment details</h4>
+                <div class="panel-body" id="appointment-details">
+                    @{Html.RenderPartial("AppointmentDetails", Model.SelectedAppointment, new ViewDataDictionary());}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function bindShowAppointmentsByMonth() {
+        $(".btn-month").click(function () {
+            var month = $(this).attr("x-month");
+            $("#appointments").load('@(Url.Action("GetAppointments","Calendar",null, Request.Url.Scheme))?month=' + month);
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    }
+    function showAppointmentDetails(appointmentId) {
+        console.log('@(Url.Action("GetAppointment", "Calendar",null, Request.Url.Scheme))?id=' + appointmentId);
+        $("#appointment-details").load('@(Url.Action("GetAppointment", "Calendar",null, Request.Url.Scheme))?id=' + appointmentId);
+    }
+
+    $().ready(function () {
+        bindShowAppointmentsByMonth();
+    });
+</script>
+
+

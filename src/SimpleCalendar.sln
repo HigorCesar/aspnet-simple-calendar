@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalendar.Domain", "SimpleCalendar.Domain\SimpleCalendar.Domain.csproj", "{582099E5-D3D6-4D2D-BBD8-D72421577BDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalendar.Infrastructure", "SimpleCalendar.Infrastructure\SimpleCalendar.Infrastructure.csproj", "{97C450C2-D31E-4A12-984C-E4515205E387}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalendar.Web", "SimpleCalendar.Web\SimpleCalendar.Web.csproj", "{AEC8F48A-0515-4064-ADB2-4951B2BB913D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalendar.Tests.Unit", "SimpleCalendar.Tests.Unit\SimpleCalendar.Tests.Unit.csproj", "{3BA9F480-1514-45D3-8EAB-B0F9F4DE580D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{582099E5-D3D6-4D2D-BBD8-D72421577BDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582099E5-D3D6-4D2D-BBD8-D72421577BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582099E5-D3D6-4D2D-BBD8-D72421577BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582099E5-D3D6-4D2D-BBD8-D72421577BDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C450C2-D31E-4A12-984C-E4515205E387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C450C2-D31E-4A12-984C-E4515205E387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C450C2-D31E-4A12-984C-E4515205E387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C450C2-D31E-4A12-984C-E4515205E387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEC8F48A-0515-4064-ADB2-4951B2BB913D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEC8F48A-0515-4064-ADB2-4951B2BB913D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEC8F48A-0515-4064-ADB2-4951B2BB913D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEC8F48A-0515-4064-ADB2-4951B2BB913D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA9F480-1514-45D3-8EAB-B0F9F4DE580D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA9F480-1514-45D3-8EAB-B0F9F4DE580D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA9F480-1514-45D3-8EAB-B0F9F4DE580D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA9F480-1514-45D3-8EAB-B0F9F4DE580D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

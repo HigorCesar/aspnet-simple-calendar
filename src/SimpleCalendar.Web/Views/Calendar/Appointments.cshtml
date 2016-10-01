@@ -1,0 +1,17 @@
+﻿@model SimpleCalendar.Web.Models.AppointmentListViewModel
+@if (Model.Appointments.Any())
+{
+    <table class="table table-striped">
+        <tbody>
+            @foreach (var appointment in Model.Appointments)
+            {
+                <tr>
+                    <td> @appointment.When</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-appointment-details" onclick="showAppointmentDetails('@appointment.Id')">@appointment.Description</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
